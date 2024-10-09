@@ -1,0 +1,93 @@
+/*--------------- Generals ---------------*/
+
+/*---------- Reset ----------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------- Custum properties ---------*/
+:root{
+
+}
+
+/*---------- Debug ----------*/
+.debug{
+    border: 1px solid red;
+}
+
+/*---------- Text formatting ----------*/
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+    font: inherit;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*---------- Utility flex ----------*/
+.d-flex{
+    display: flex;
+}
+
+.j-space-between{
+    justify-content: space-between;
+}
+
+.j-space-around{
+    justify-content: space-around;
+}
+
+.j-center{
+    justify-content: center;
+}
+
+.j-end{
+    justify-content: end;
+}
+
+.a-center{
+    align-items: center;
+}
+
+.d-column{
+    flex-direction: column;
+}
+
+.d-row{
+    flex-direction: row;
+}
+
+.d-row-reverse{
+    flex-direction: row-reverse;
+}
+
+.f-wrap{
+    flex-wrap: wrap;
+}
+
+/*---------- Container ---------*/
+.container{
+    width: %;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/*--------------- Index ---------------*/
+
+/*---------- Header ----------*/
+
+/*---------- Main ----------*/
+
+/*---------- Footer ----------*/
