@@ -78,6 +78,7 @@ h3{
     color: white;
     padding: 6px 12px;
     display: inline-block;
+    cursor: pointer;
 }
 
 .button:hover{
@@ -216,14 +217,75 @@ header nav > ul li:hover .dropdown{
     font-weight: 900;
 }
 
-div.border{
-    width: calc((100% - 20px) / 3);
-    max-width: 300px;
-}
-
 .clutter{ /* classe gestione ingombro */
     height: var(--clutter);
 }
+
+/*---------- Plans ---------*/
+#plans h2{
+    margin: 30px 0 20px 0;
+}
+
+#plans label{
+    padding: 0 20px 0 4px;
+}
+
+.plans-card{
+    margin-top: 25px;
+}
+
+.plans-top{
+    width: 320px;
+    border: 2px solid lightgray;
+    padding: 8px;
+}
+
+.plans-top i{
+    padding-right: 6px;
+}
+
+.plans-bottom{
+    width: 320px;
+    height: calc(100% - 3em); /*accrocchio perche non riuscivo a stretchare*/
+    padding: 20px;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+}
+
+#plans ul{
+    padding: 45px 0;
+    margin-left: var(--fa-li-margin, 1.5em);
+}
+
+#plans ul{
+    padding: 35px 0;
+}
+
+#plans li{
+    padding: 8px 0;
+}
+
+#plans .button{
+    padding: 14px;
+    margin-bottom: 30px;
+}
+
+#plans .button{
+    padding: 14px;
+    margin-bottom: 30px;
+}
+
+#plans a{
+    all: revert;
+}
+
+#plans hr{
+    width: 20%;
+    border: 1px solid lightgray;
+    margin: 50px 0;
+}
+
 
 /*---------- Enterprise ---------*/
 #enterprise{
@@ -231,7 +293,7 @@ div.border{
 }
 
 .enterprise-top{
-    padding: 12px;
+    padding: 8px;
     border: 2px solid lightgrey;
 }
 
@@ -249,7 +311,7 @@ div.border{
     width: 65%;
 }
 
-.enterprise-bottom-left *{
+.enterprise-bottom-left *:nth-child(1){
     padding-bottom: 12px;
 }
 
@@ -261,7 +323,7 @@ div.border{
     width: 35%;
 }
 .enterprise-bottom-right .button{
-    padding: 8px 24px;
+    padding: 14px 24px;
 }
 /*---------- Partners ----------*/
 #partner{
@@ -291,6 +353,12 @@ color: black;
 background-color: white;
 border: 2px solid black;
 margin-top: 20px;
+}
+
+#partner .button:hover{
+    color: var(--color-blue);
+    opacity: 1;
+    border-color: var(--color-blue);
 }
 
 /*--------- Buisness Features ---------*/
