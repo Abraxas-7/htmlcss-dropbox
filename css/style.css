@@ -9,7 +9,26 @@
 
 /*--------- Custum properties ---------*/
 :root{
+    --color-blue: #0061FF;
+    --color-light-blue:#B4D0E7;
+    --color-dark: #000000;
+    --color-white: #FFFFFF;
+    --color-red: #61082B;
+    --color-logo-green: #A2D39B;
+    --color-logo-hard-red: #61082B;
+    --color-logo-mid-red: #D5001F;
+    --color-logo-light-red: #FF1C1C;
+    --color-logo-hard-blue: #0D2481;
+    --color-logo-mid-blue: #0093CE;
+    --color-logo-light-blue: #B4D0E7;
+    --color-logo-yellow: #FFD830;
+    --color-logo-gray: #F5F5F5;
+    --clutter: 70px;
+}
 
+/*---------- Scroll ----------*/
+html{
+    scroll-behavior: smooth;
 }
 
 /*---------- Debug ----------*/
@@ -22,14 +41,42 @@ body{
     font-family: "Open Sans", sans-serif;
 }
 
+img{
+    width: 100%;
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+}
+
 a{
     text-decoration: none;
     color:inherit;
     font: inherit;
 }
 
-a:hover{
-    text-decoration: underline;
+h1{
+    font-size: 4.5em;
+    margin-bottom: 50px;
+    font-weight: 800;
+}
+
+h2{
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+/*---------- Button ----------*/
+.button{
+    background-color: var(--color-blue);
+    color: white;
+    padding: 6px 12px;
+    display: inline-block;
+}
+
+.button:hover{
+    opacity: 0.8;
 }
 
 /*---------- Utility flex ----------*/
@@ -57,6 +104,10 @@ a:hover{
     align-items: center;
 }
 
+.a-stretch{
+    align-items: stretch;
+}
+
 .d-column{
     flex-direction: column;
 }
@@ -74,20 +125,282 @@ a:hover{
 }
 
 /*---------- Container ---------*/
-.container{
-    width: %;
+.container-big{
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-
-
+.container-small{
+    width: 70%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
 
 
 /*--------------- Index ---------------*/
 
 /*---------- Header ----------*/
+header{
+    width: 100%;
+    padding: 0px 20px;
+    background-color: var(--color-white);
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.shadow{
+    box-shadow: 0px 0px 5px 0px #111; 
+}
+
+header nav ul:first-child li a,
+header nav ul:nth-child(2) li:not(:last-child) a{
+    padding: 30px 12px;
+    display:block;
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+header nav ul:first-child li:not(:first-child) a:hover,
+header nav ul:nth-child(2) li:not(:last-child) a:hover{
+    border-bottom: 2px solid black;
+}
+
+.dropdown{
+    display: none;
+}
+
+header nav > ul li:hover .dropdown{
+    display: block;
+}
+
 
 /*---------- Main ----------*/
+#hero{
+    background-color: var(--color-light-blue);
+}
+
+.hero-pos{
+    position: relative;
+    top: var(--clutter);
+}
+
+.hero-left{
+    width: 30%;
+    position: relative;
+}
+
+.hero-left > *{
+    margin-bottom: 40px;
+}
+
+.hero-right{
+    width: 70%;
+}  
+
+#hero i{
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: var(--clutter);
+    font-size: 48px;
+    font-weight: 900;
+}
+
+div.border{
+    width: calc((100% - 20px) / 3);
+    max-width: 300px;
+}
+
+.clutter{ /* classe gestione ingombro */
+    height: var(--clutter);
+}
+
+/*---------- Custumers ----------*/
+.big-square{
+    width: calc(100% / 3);
+    height: calc(100vw / 3);
+}
+
+.small-square{
+    width: calc(100% / 2);
+    height: calc(100% / 2);
+    display: flex;
+    justify-content: center;
+    border: 20px solid rgba(0, 0, 0, 0); 
+}
+
+.small-square:hover{
+    border-color: rgba(256, 256, 256, 0.3);
+}
+
+.small-square > img{
+    width: 50%;
+    filter: invert();
+}
+
+#customers .big-square:first-child .small-square:nth-child(1){
+    background-color: var(--color-logo-green);
+}
+
+#customers .big-square:first-child .small-square:nth-child(2){
+    background-color: var(--color-logo-hard-red);
+}
+
+#customers .big-square:first-child .small-square:nth-child(3){
+    background-color: var(--color-logo-mid-blue);
+}
+
+#customers .big-square:first-child .small-square:nth-child(4){
+    background-color: var(--color-logo-light-red);
+}
+
+#customers .big-square:last-child .small-square:nth-child(1){
+    background-color: var(--color-logo-mid-red);
+}
+
+#customers .big-square:last-child .small-square:nth-child(2){
+    background-color: var(--color-logo-light-blue);
+}
+
+#customers .big-square:last-child .small-square:nth-child(3){
+    background-color: var(--color-logo-hard-blue);
+}
+
+#customers .big-square:last-child .small-square:nth-child(4){
+    background-color: var(--color-logo-yellow);
+}
+
+.center-square{
+    background-color: var(--color-logo-gray);
+    padding: 40px;
+}
+
+.center-square img{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.center-square hr{
+    width: 22%;
+    border: 1px solid lightgray;
+}
+
+.center-square p{
+    margin: 30px 0;
+}
+
+
+.overflow{
+    overflow-y: auto;   
+}
+
+
+
+/*---------- Call To Action ---------*/
+#call-to-action{
+    background-color: var(--color-light-blue);
+    padding: 80px 0px;
+}
+
+.cta-left{
+    width: 70%;
+}
+
+.cta-left > h2{
+    color: var(--color-logo-hard-red);
+}
+
+.cta-right{
+    width: 30%;
+}
+
+.cta-right > .button{
+    color: #000000;
+    background-color: white;
+    padding: 10px 50px;
+}
+
+.cta-right > .button:hover{
+    opacity: 1;
+    color: #0061FF;
+    cursor: pointer;
+}
+
+
+/*---------- FAQ ----------*/
+#faq{
+    padding: 100px 0;
+}
+
+#faq h2{
+    padding-bottom: 40px;
+}
+
+#faq .container-small > *{
+    border-bottom: 3px solid lightgray;
+}
+
+#faq i{
+    padding: 30px 40px;
+}
+
+.questions{
+    font-weight: 700;
+}
+
+.questions, .hide{
+    padding: 30px 0;
+} 
+
+.hide{
+    display: none;
+}
+
+.questions-box:hover + .hide{
+    display: block;
+}
+
+.questions-box:hover i{
+    transform: rotate(180deg);
+  }
+
+
+
 
 /*---------- Footer ----------*/
+
+footer{
+    background-color: var(--color-dark);
+    color: white;
+    padding-top: 80px;
+}
+
+footer div ul{
+    width: calc((100% - 20px) / 3);
+    max-width: calc(1200px / 5) - 20px;
+    padding-bottom: 100px;
+}
+
+h3{
+    font-size: 1.4em;
+    padding: 20px 0;
+}
+
+footer a{
+    line-height: 2em;
+}
+
+footer hr{
+    width: 10%;
+}
+
+.lang-select{
+    padding: 30px 0;;
+}
+
+footer select{
+    border: none;
+    background-color: var(--color-dark);
+    color: white;
+}
