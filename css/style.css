@@ -32,9 +32,9 @@ html{
 }
 
 /*---------- Debug ----------*/
-/* .debug{
+.debug{
     border: 1px solid red;
-} */
+}
 
 /*---------- Text formatting ----------*/
 body{
@@ -214,6 +214,20 @@ div.border{
 
 .clutter{ /* classe gestione ingombro */
     height: var(--clutter);
+}
+
+/*--------- Buisness Features ---------*/
+#business-features{
+    margin: 100px 0;
+}
+
+#business-features h2{
+    padding: 30px 0;
+}
+
+.card{
+    width: calc((100% / 3) - 20px);
+    margin: 20px 0;
 }
 
 /*---------- Custumers ----------*/
